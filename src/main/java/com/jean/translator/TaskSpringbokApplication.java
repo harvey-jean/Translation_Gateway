@@ -1,13 +1,13 @@
-package com.jean.taskspringboot;
+package com.jean.translator;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class TaskSpringbootApplication {
+public class TaskSpringbokApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(TaskSpringbootApplication.class, args);
+		SpringApplication.run(TaskSpringbokApplication.class, args);
 	}
 
 }

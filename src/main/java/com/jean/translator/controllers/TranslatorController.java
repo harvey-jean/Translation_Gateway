@@ -1,18 +1,16 @@
-package com.jean.taskspringboot.controllers;
+package com.jean.translator.controllers;
 
-import com.jean.taskspringboot.services.TranslatorService;
+import com.jean.translator.services.TranslatorService;
+import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("api/v1/translations")
+@RequiredArgsConstructor
 public class TranslatorController {
 
     private final TranslatorService translatorService;
-
-    public TranslatorController(TranslatorService translatorService){
-        this.translatorService = translatorService;
-    }
 
     @GetMapping("/{id}")
     public ResponseEntity<String> getTranslation(@PathVariable int id,
