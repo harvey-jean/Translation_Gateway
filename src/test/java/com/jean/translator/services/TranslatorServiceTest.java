@@ -1,6 +1,5 @@
 package com.jean.translator.services;
 
-import com.jean.translator.constants.TranslatorDataProvider;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 import static org.junit.jupiter.api.Assertions.*;
@@ -20,52 +19,31 @@ class TranslatorServiceTest {
             "3, it, Cavallo"
     })
     public void testTranslate_itShouldReturnCorrectTranslationsAsExpected(int id,
-                                                                          String languageCode,
-                                                                          String expectedText){
+                                                                          String language,
+                                                                          String expectedTranslation){
         //Given
-        TranslatorDataProvider translatorDataProvider= new TranslatorDataProvider();
-        TranslatorService translatorService = new TranslatorService(translatorDataProvider);
+        TranslatorService translatorService = new TranslatorService();
         //When
-        String translatedText = translatorService.getTranslation(id,languageCode);
+        String translatedTextResult = translatorService.getTranslation(id,language);
         //Then
-        assertEquals(expectedText, translatedText);
+        assertEquals(expectedTranslation, translatedTextResult);
     }
 
     @ParameterizedTest
     @CsvSource({
-            "4, en, ID not found",
-            "5, de, ID not found",
-            "6, it, ID not found"
+            "4, en, Translation not found",
+            "5, de, Translation not found",
+            "6, it, Translation not found"
     })
     public void testTranslate_itShouldReturnIdNotFound(int id,
-                                                       String languageCode,
-                                                       String expectedText){
+                                                       String language,
+                                                       String expectedTranslation){
         //Given
-        TranslatorDataProvider translatorDataProvider= new TranslatorDataProvider();
-        TranslatorService translatorService = new TranslatorService(translatorDataProvider);
+        TranslatorService translatorService = new TranslatorService();
         //When
-        String translatedText = translatorService.getTranslation(id,languageCode);
+        String translatedText = translatorService.getTranslation(id,language);
         //Then
-        assertEquals(expectedText, translatedText);
-
-    }
-
-    @ParameterizedTest
-    @CsvSource({
-            "1, fr, Language Code not found",
-            "2, ru, Language Code not found",
-            "3, cn, Language Code not found"
-    })
-    public void testTranslate_itShouldReturnLanguageCodeNotFound(int id,
-                                                                 String languageCode,
-                                                                 String expectedText){
-        //Given
-        TranslatorDataProvider translatorDataProvider= new TranslatorDataProvider();
-        TranslatorService translatorService = new TranslatorService(translatorDataProvider);
-        //When
-        String translatedText = translatorService.getTranslation(id,languageCode);
-        //Then
-        assertEquals(expectedText, translatedText);
+        assertEquals(expectedTranslation, translatedText);
 
     }
 

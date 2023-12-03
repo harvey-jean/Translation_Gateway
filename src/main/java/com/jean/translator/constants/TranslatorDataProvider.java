@@ -1,21 +1,26 @@
 package com.jean.translator.constants;
 
 import com.jean.translator.entities.Translator;
-import org.springframework.stereotype.Component;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashMap;
+import java.util.Map;
 
-@Component
 public class TranslatorDataProvider {
 
-    private final List<Translator> translations = new ArrayList<>();
+    public static final Map<Translator, String> translations = new HashMap<>();
+    public static final String TRANSLATION_NOT_FOUND = "Translation not found";
 
-    public List<Translator> tranlationsDatasInitializer(){
-        translations.add(new Translator(1,"Cat","Katze","Gatto"));
-        translations.add(new Translator(2, "Dog","Hund","Cane"));
-        translations.add(new Translator(3,"Horse","Pferd","Cavallo"));
+    static {
+        translations.put(new Translator(1,"en"), "Cat");
+        translations.put(new Translator(1,"de"), "Katze");
+        translations.put(new Translator(1,"it"), "Gatto");
 
-        return translations;
+        translations.put(new Translator(2,"en"), "Dog");
+        translations.put(new Translator(2,"de"), "Hund");
+        translations.put(new Translator(2,"it"), "Cane");
+
+        translations.put(new Translator(3,"en"), "Horse");
+        translations.put(new Translator(3,"de"), "Pferd");
+        translations.put(new Translator(3,"it"), "Cavallo");
     }
 
 }
