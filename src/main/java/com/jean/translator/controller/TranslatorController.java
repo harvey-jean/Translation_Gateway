@@ -1,6 +1,6 @@
-package com.jean.translator.controllers;
+package com.jean.translator.controller;
 
-import com.jean.translator.services.TranslatorService;
+import com.jean.translator.service.TranslatorService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

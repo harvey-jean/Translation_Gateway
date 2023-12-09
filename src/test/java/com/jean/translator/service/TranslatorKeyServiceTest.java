@@ -1,10 +1,10 @@
-package com.jean.translator.services;
+package com.jean.translator.service;
 
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 import static org.junit.jupiter.api.Assertions.*;
 
-class TranslatorServiceTest {
+class TranslatorKeyServiceTest {
 
     @ParameterizedTest
     @CsvSource({
@@ -35,9 +35,9 @@ class TranslatorServiceTest {
             "5, de, Translation not found",
             "6, it, Translation not found"
     })
-    public void testTranslate_itShouldReturnIdNotFound(int id,
-                                                       String language,
-                                                       String expectedTranslation){
+    public void testTranslate_itShouldReturnTranslationNotFound(int id,
+                                                                String language,
+                                                                String expectedTranslation){
         //Given
         TranslatorService translatorService = new TranslatorService();
         //When
