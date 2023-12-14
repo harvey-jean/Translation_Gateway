@@ -1,8 +1,8 @@
-package com.jean.translator.service;
+package com.jean.task.service;
 
-import com.jean.translator.constant.CustomizedMessageProvider;
-import com.jean.translator.repository.TranslatorDataProvider;
-import com.jean.translator.entity.TranslatorKey;
+import com.jean.task.constant.CustomizedMessageProvider;
+import com.jean.task.repository.TranslatorDataProvider;
+import com.jean.task.entity.TranslatorKey;
 import org.springframework.stereotype.Service;
 
 @Service

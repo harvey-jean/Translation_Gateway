@@ -1,6 +1,6 @@
-package com.jean.translator.repository;
+package com.jean.task.repository;
 
-import com.jean.translator.entity.TranslatorKey;
+import com.jean.task.entity.TranslatorKey;
 import java.util.HashMap;
 import java.util.Map;
 

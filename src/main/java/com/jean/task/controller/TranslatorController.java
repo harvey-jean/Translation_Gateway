@@ -1,12 +1,12 @@
-package com.jean.translator.controller;
+package com.jean.task.controller;
 
-import com.jean.translator.service.TranslatorService;
+import com.jean.task.service.TranslatorService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("api/v1/translations")
+@RequestMapping("api/v1/translation")
 @RequiredArgsConstructor
 public class TranslatorController {
 

@@ -1,4 +1,4 @@
-package com.jean.translator.entity;
+package com.jean.task.entity;
 
 
 public record TranslatorKey(int id, String language) {

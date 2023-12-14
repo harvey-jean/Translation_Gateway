@@ -1,4 +1,4 @@
-package com.jean.translator.service;
+package com.jean.task.service;
 
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
