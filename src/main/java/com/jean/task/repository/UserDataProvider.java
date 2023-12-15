@@ -8,7 +8,7 @@ import java.util.Map;
 import java.util.UUID;
 
 public class UserDataProvider {
-    private static final Map<UUID, User> users = new HashMap<>();
+    public static final Map<UUID, User> users = new HashMap<>();
 
     public static User saveUser(User user){
         User newUser = User.create(user.name(), user.age(), user.language());
